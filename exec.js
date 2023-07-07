@@ -79,11 +79,14 @@ const bytes = await fs.promises.readFile('./example.wasm')
 const module = await WebAssembly.instantiate(bytes, api)
 const component = module.instance.exports
 
+// create component
 component.create()
-//console.log({ nodes })
 
+// mount component
 component.mount(target, 0)
+
 console.log(dom.window.document.body.innerHTML)
 
+// detach component
 //component.detach(target, 0)
 //console.log(dom.window.document.body.innerHTML)

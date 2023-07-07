@@ -84,17 +84,16 @@ app.get('/', (req, res) => {
             }
           }
           const module = await WebAssembly.instantiateStreaming(fetch('/example.wasm'), api)
-          console.log(module.instance.exports)
           const component = module.instance.exports
 
+          // create nodes
           component.create()
-          console.log({ nodes })
 
+          // mount component
           component.mount(target, 0)
-          console.log(target.innerHTML)
 
+          // detach component
           //component.detach(target, 0)
-          //console.log(document.body.innerHTML)
         </script>
       </body>
     </html>
