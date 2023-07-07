@@ -24,7 +24,8 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "node --experimental-wasm-reftypes exec.js",
+    "dev:server": "node --experimental-wasm-reftypes exec.js",
+    "dev:client": "node server.js",
     "build": "wat2wasm example.wat"
   },
   "devDependencies": {

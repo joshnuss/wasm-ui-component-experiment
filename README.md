@@ -19,6 +19,12 @@ Experimenting with a Svelte/React-like UI framework that uses WASM.
 - It renders server-side using `jsdom`, see `exec.js`
 - It renders in the browser, using the HTML provided in `server.js`
 
+## Usage
+
+- `pnpm build`: build `example.wat` into `example.wasm`.
+- `pnpm dev:server`: run component server-side using `jsdom`.
+- `pnpm dev:client`: visit `http://localhost:3000` to render component in-browser.
+
 ## Learnings & unknowns
 
 - Would it require a large runtime to be embedded within the wasm assembly? For example dotnet blazor needs to embed the .net runtime. Though the .net runtime is larger that what needed for simple DOM manipulation.
