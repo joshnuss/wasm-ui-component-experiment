@@ -1,4 +1,4 @@
-WASM component experiment
+WASM UI-component experiment
 -------------------------
 
 Experimenting with a Svelte/React-like UI framework that uses WASM.
