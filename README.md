@@ -14,7 +14,7 @@ Experimenting with a Svelte/React-like UI framework that uses WASM.
 ## How it works
 
 - I hand-coded an assembly in Wasm Text Format (wat). See `example.wat`.
-- It has functions for `mount`, `attach`, `detach` and `update`. Similar to a Svelte or React component.
+- It has functions for `create`, `mount`, `update`, and `detach`. Similar to a Svelte or React component.
 - It expects an imported library for accessing the DOM. ie `createElement`, `appendChild`, etc..
 - It renders server-side using `jsdom`, see `exec.js`
 - It renders in the browser, using the HTML provided in `server.js`
